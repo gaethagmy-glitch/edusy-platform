@@ -1,0 +1,193 @@
+.courses {
+  padding: 100px 0;
+  background: white;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.courseCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--gray-100);
+  transition: all var(--transition-base);
+}
+
+.courseCard:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-6px);
+}
+
+.courseCard:hover .playOverlay {
+  opacity: 1;
+}
+
+.cardTop {
+  position: relative;
+}
+
+.thumbnail {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.playOverlay {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition-base);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.playOverlay:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.1);
+}
+
+.category {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.discount {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  background: var(--error);
+  color: white;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.cardBody {
+  padding: 20px;
+}
+
+.courseTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 12px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.teacherRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.teacherAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.teacherName {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.courseMeta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priceBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-600);
+}
+
+.oldPrice {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.enrollBtn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.enrollBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.viewAll {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 1024px) {
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .thumbnail {
+    height: 170px;
+  }
+}

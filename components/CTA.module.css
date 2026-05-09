@@ -1,0 +1,103 @@
+.cta {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-500), var(--primary-400));
+  overflow: hidden;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 40%),
+    radial-gradient(circle at 60% 80%, rgba(255,255,255,0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.ctaContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.ctaSubtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, var(--accent-500), var(--accent-400)) !important;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4) !important;
+}
+
+.ctaBtn:hover {
+  box-shadow: 0 6px 28px rgba(249, 115, 22, 0.5) !important;
+}
+
+.ctaSecondaryBtn {
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+}
+
+.ctaSecondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.ctaTrust {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaTrust span {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+
+  .ctaTrust {
+    gap: 12px;
+  }
+  
+  .ctaActions {
+    flex-direction: column;
+    align-items: center;
+  }
+}

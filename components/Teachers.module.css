@@ -1,0 +1,149 @@
+.teachers {
+  padding: 100px 0;
+  background: var(--bg-primary);
+}
+
+.teachersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.teacherCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--gray-100);
+  transition: all var(--transition-base);
+}
+
+.teacherCard:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-6px);
+}
+
+.avatarWrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.teacherAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 auto;
+}
+
+.onlineBadge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: var(--success);
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.teacherName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+}
+
+.teacherSpecialty {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.teacherStats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: 20px;
+}
+
+.teacherStat {
+  text-align: center;
+}
+
+.teacherStat strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  font-weight: 700;
+}
+
+.teacherStat span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.statDivider {
+  width: 1px;
+  height: 30px;
+  background: var(--gray-200);
+}
+
+.teacherActions {
+  display: flex;
+  gap: 10px;
+}
+
+.viewProfileBtn {
+  flex: 1;
+  padding: 10px 16px;
+  background: var(--primary-50);
+  color: var(--primary-600);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.viewProfileBtn:hover {
+  background: var(--primary-100);
+}
+
+.messageBtn {
+  padding: 10px 14px;
+  background: var(--gray-50);
+  color: var(--gray-500);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.messageBtn:hover {
+  background: var(--gray-100);
+  color: var(--primary-600);
+}
+
+@media (max-width: 1024px) {
+  .teachersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .teachersGrid {
+    grid-template-columns: 1fr;
+  }
+}
